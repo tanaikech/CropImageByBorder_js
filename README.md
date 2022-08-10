@@ -30,7 +30,7 @@ In this sample situation, a red rectangle is enclosed by a border (1 pixel) with
 Or, using jsdelivr cdn
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js@master/cropImageByBorder_js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js@latest/cropImageByBorder_js.min.js"></script>
 ```
 
 # Usage
@@ -38,7 +38,7 @@ Or, using jsdelivr cdn
 This library is used for cropping the image by the border. The simple sample script is as follows.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js/cropImageByBorder_js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js@latest/cropImageByBorder_js.min.js"></script>
 
 <body>
   <input type="file" accept="image/png" onchange="main(this)" />
