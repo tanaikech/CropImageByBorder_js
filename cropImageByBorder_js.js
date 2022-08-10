@@ -34,7 +34,6 @@ const CropImageByBorder = {
       ar.reverse();
       return o;
     });
-    console.log({ top, end });
     if ([top, end].every((e) => Object.values(e).every((f) => f == 0))) {
       throw new Error(
         "There is no border for cropping image. Please confirm the border, again"
@@ -43,11 +42,11 @@ const CropImageByBorder = {
     return { top, end };
   },
 
-  getInnerImage: function ({ base64Data, borderColor }) {
+  getInnerImage: function ({ base64Data, borderColor, offset }) {
     return new Promise((resolve, reject) => {
       try {
         const self = this;
-        const offset = 1;
+        offset = offset || 1;
         const cvs = document.createElement("canvas");
         const ctx = cvs.getContext("2d");
         const img = new Image();

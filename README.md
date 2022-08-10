@@ -73,9 +73,13 @@ When this HTML is opened, you can see the file input tag. When you put a sample 
 
 In the current version, the method of `getInnerImage` has 1 argument like `CropImageByBorder.getInnerImage(obj)`. The cropping is done using **Canvas API**. [Ref](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 
-- `obj` : This is an object including the border color and data. In this case, the data is required to be base64 data including the header like `data:image/png;base64,` for PNG.
+- `obj` : This is an object including the border color and data.
 
-- Returned value: In this library, the output image is returned as base64 data including the header of `data:image/png;base64,`. The default output mimeType is `image/png`.
+  - `borderColor`: Border color. This library crops the image using this border. Please set the color as the HEX like `#000000`.
+  - `base64Data`: In this case, the data is required to be base64 data including the header like `data:image/png;base64,` for PNG.
+  - `offset`: If the result image shows the border, please adjust this value. The default value is `1` pixel.
+
+- Returned value: Promise is returned. And, in this library, the output image is returned as base64 data including the header of `data:image/png;base64,`. The default output mimeType is `image/png`.
 
 ---
 
@@ -97,8 +101,12 @@ If you have any questions and commissions for me, feel free to tell me.
 
 # Update History
 
-- v1.0.0 (August 10, 2022)
+- v1.0.0 (August 9, 2022)
 
   1. Initial release.
+
+- v1.0.1 (August 10, 2022)
+
+  1. `offset` is added.
 
 [TOP](#top)
