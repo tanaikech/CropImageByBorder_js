@@ -30,7 +30,7 @@ In this sample situation, a red rectangle is enclosed by a border (1 pixel) with
 Or, using jsdelivr cdn
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js/cropImageByBorder_js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tanaikech/CropImageByBorder_js@master/cropImageByBorder_js.min.js"></script>
 ```
 
 # Usage
