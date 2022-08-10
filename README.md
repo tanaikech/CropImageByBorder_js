@@ -77,7 +77,7 @@ In the current version, the method of `getInnerImage` has 1 argument like `CropI
 
   - `borderColor`: Border color. This library crops the image using this border. Please set the color as the HEX like `#000000`.
   - `base64Data`: In this case, the data is required to be base64 data including the header like `data:image/png;base64,` for PNG.
-  - `offset`: If the result image shows the border, please adjust this value. The default value is `1` pixel.
+  - `offset`: If the result image shows the border, please adjust this value. The default value is `2` pixel.
 
 - Returned value: Promise is returned. And, in this library, the output image is returned as base64 data including the header of `data:image/png;base64,`. The default output mimeType is `image/png`.
 

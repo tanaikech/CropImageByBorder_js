@@ -13,7 +13,7 @@ const CropImageByBorder = {
     return false;
   },
 
-  getCoordinates_: function (ctx, width, height, borderColor) {
+  getCoordinates_: function (ctx, width, height, borderColor, offset) {
     const self = this;
     const ar = [];
     for (var y = 0; y < height; y++) {
@@ -39,6 +39,8 @@ const CropImageByBorder = {
         "There is no border for cropping image. Please confirm the border, again"
       );
     }
+    end.ly -= offset;
+    end.ry -= offset;
     return { top, end };
   },
 
@@ -46,7 +48,7 @@ const CropImageByBorder = {
     return new Promise((resolve, reject) => {
       try {
         const self = this;
-        offset = offset || 1;
+        offset = offset || 2;
         const cvs = document.createElement("canvas");
         const ctx = cvs.getContext("2d");
         const img = new Image();
@@ -61,7 +63,8 @@ const CropImageByBorder = {
             ctx,
             width,
             height,
-            borderColor
+            borderColor,
+            offset
           );
           const newWidth = top.rx - top.lx - offset;
           const newHeight = end.ly - top.ly - offset;
